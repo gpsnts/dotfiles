@@ -1,0 +1,44 @@
+urxvt.perl-ext-common: font-size,readline,matcher,selection
+urxvt.scrollBar: false
+urxvt.letterSpace: 0
+urxvt.geometry: 92x24
+urxvt.internalBorder: 32
+urxvt.cursorBlink: false
+urxvt.cursorUnderline: false
+urxvt.saveline: 2048
+urxvt.urgentOnBell: true
+urxvt.depth: 32
+urxvt.borderLess: False
+urxvt.locale: true
+urxvt*transparent: true
+urxvt*shading: 30
+urxvt*font: xft:DroidSansMono Nerd Font Mono:size=18
+! urxvt*font: xft:CozetteVector:size=18
+urxvt.keysym.C-Up:     perl:font-size:increase
+urxvt.keysym.C-Down:   perl:font-size:decrease
+urxvt.keysym.C-S-Up:   perl:font-size:incglobal
+urxvt.keysym.C-S-Down: perl:font-size:decglobal
+urxvt.keysym.C-equal:  perl:font-size:reset
+urxvt.keysym.C-slash:  perl:font-size:show
+
+Xcursor.theme: Breeze_Default
+Xcursor.size: 24
+
+rofi.font:              CozetteVector 14
+
+*color0:  #000000
+*color8:  #555753
+*color1:  #ff6565
+*color9:  #ff8d8d
+*color2:  #93d44f
+*color10: #c8e7a8
+*color3:  #eab93d
+*color11: #ffc123
+*color4:  #204a87
+*color12: #3465a4
+*color5:  #ce5c00
+*color13: #f57900
+*color6:  #89b6e2
+*color14: #46a4ff
+*color7:  #cccccc
+*color15: #ffffff
