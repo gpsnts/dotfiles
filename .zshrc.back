@@ -9,36 +9,14 @@ PSQL_HOME="/home/usr/.asdf/installs/postgres"
 
 export PATH=${PATH}:/usr/local/mysql/bin:$HOME/.local/bin/:/opt/eclipse:$COMPOSER_HOME:/usr/bin/cmake:/home/usr/Android/Sdk/platform-tools$PATH
 
+#### ANDROID
+#export JAVA_OPTS='-XX:+IgnoreUnrecognizedVMOptions --add-modules java.se.ee'
+
 #### ASDF-VM
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/plugins/java/set-java-home.zsh
 
 #### Functions
-function extract() {
-  case "$1" in
-    *.bz2) tar -jxvf $1;;
-    *.xz) tar -Jxxvf $1;;
-    *.gz) tar -zxvf $1;;
-    *) echo "Formato inválido";;
-  esac
-}
-
-function search_in_dir () {
-  ls | grep $1
-}
-
-function clean_the_f_vim_swap() {
-  rm -rf $HOME/.local/share/nvim/swap/*
-}
-
-function git_diff_hashes_content() {
-  git diff $1^^..$2 -- $3
-}
-
-function git_diff_hashes() {
-  git log --name-only --pretty=oneline --full-index $1^^..$2 | grep -vE '^[0-9a-f]{40} ' | sort | uniq
-}
-
 function opengl_env_cmake() {
   cmake -D CMAKE_C_COMPILER="$(which gcc)" -D CMAKE_CXX_COMPILER="$(which g++)" -D CMAKE_CXX_FLAGS="-lGLU -lglut -lGL" $1
 }
@@ -145,5 +123,6 @@ source $ZSH/oh-my-zsh.sh
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
