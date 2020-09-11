@@ -19,6 +19,7 @@ function extract() {
     *.bz2) tar -jxvf $1;;
     *.xz) tar -Jxxvf $1;;
     *.gz) tar -zxvf $1;;
+    *.zip) unzip $1;;
     *) echo "Formato inválido";;
   esac
 }
