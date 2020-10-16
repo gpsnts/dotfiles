@@ -6,6 +6,13 @@
 
 call plug#begin()
 
+" Nerdfont handlr
+Plug 'ambdalisue/nerdfont.vim'
+Plug 'antoinemadec/FixCursorHold.nvim'
+
+" CtrlP
+Plug 'kien/ctrlp.vim'
+
 " easymotion
 Plug 'easymotion/vim-easymotion'
 
@@ -102,6 +109,9 @@ Plug '907th/vim-auto-save'
 Plug 'mhinz/vim-startify'
 
 call plug#end()
+
+" Cursor uptime
+let g:cursorhold_updatetime = 100
 
 set tabstop=2
 set shiftwidth=2

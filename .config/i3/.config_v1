@@ -196,7 +196,7 @@ for_window [class=".*"] move position center
 exec_always --no-startup-id xrandr --output HDMI-1 --left-of eDP-1
 
 # Launch Pywal
-exec_always --no-startup-id wal -i $HOME/.Papes
+exec_always --no-startup-id /home/usr/.asdf/shims/wal -i $HOME/.Papes
 
 # Launch polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
@@ -204,6 +204,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # Launch compton
 exec_always --no-startup-id picom --backend glx --blur-method kernel --config $HOME/.config/compton/config -b
 
-### Polkit 
-exec_always /usr/lib/policykit-1/polkitd --no-debug
-exec_always /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+### Polkit solver
+# I3 SOLVERS
+exec /usr/lib/policykit-1/polkitd --no-debug
+exec /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
