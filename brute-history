@@ -1,0 +1,55 @@
+    1  sudo apt install tasksel
+    2  sudo tasksel install xubuntu-core
+    3  df
+    4  c
+    5  clear
+    6  df
+    7  /snap/
+    8  c
+    9  ls
+   10  cd /snap/
+   11  c
+   12  ls
+   13  clear
+   14  ls
+   15  less README 
+   16  ..
+   17  c
+   18  ls
+   19  clear
+   20  sudo apt purge snap
+   21  rm -rf ~/snap
+   22  sudo rm -rf /snap
+   23  sudo rm -rf /var/snap
+   24  rm -rf ~/snap
+   25  sudo rm -rf /snap
+   26  sudo rm -rf /var/snap
+   27  sudo rm -rf /var/lib/snapd/
+   28  c
+   29  systemctl status snapd.
+   30  sudo apt autoremove --purge snapd
+   31  reboot
+   32  systemctl status snap
+   33  systemctl status snapd
+   34  ee
+   35  exit
+   36  sudo apt remove pop-desktop 
+   37  sudo apt autoremove 
+   38  sudo apt purge gnome*
+   39  sudo apt-get purge gnome*
+   40  sudo apt-get autoremove 
+   41  git clone https://github.com/gpsnts/dotfiles.git
+   42  cd dotfiles/
+   43  sudo rm -rf /etc/apt/sources.list
+   44  sudo cp -r sources.list /etc/apt/
+   45  add # first el system76-ubuntu
+   46  sudo apt install neovim
+   47  sudo vim /etc/apt/sources.list.d/system76-ubuntu-pop-focal.list
+   48  sudo apt update; sudo apt upgrade -y
+   49  reboot
+   50  sudo apt install i3-wm
+   51  history 
+   52  c
+   53  clear
+   54  touch brute-history
+   55  history >> brute-history 
