@@ -11,8 +11,9 @@ urxvt.depth: 32
 urxvt.borderLess: False
 urxvt.locale: true
 urxvt*transparent: true
-urxvt*shading: 30
-urxvt*font: xft:DroidSansMono Nerd Font Mono:size=18
+urxvt*shading: 0
+urxvt*font: xft:MesloLGS NF:size=13
+! urxvt*font: xft:DroidSansMono Nerd Font Mono:size=14
 ! urxvt*font: xft:CozetteVector:size=18
 urxvt.keysym.C-Up:     perl:font-size:increase
 urxvt.keysym.C-Down:   perl:font-size:decrease
