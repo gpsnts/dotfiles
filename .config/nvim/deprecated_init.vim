@@ -3,33 +3,40 @@
 "|  \| |/ _ \/ _ \ \ / / | '_ ` _ \   / _` |/ _ \| __/ __| | |
 "| |\  |  __/ (_) \ V /| | | | | | | | (_| | (_) | |_\__ \ |_|
 "|_| \_|\___|\___/ \_/ |_|_| |_| |_|  \__,_|\___/ \__|___/ (_)
-" By: @gpsnts
 
-
-" Plugins
 call plug#begin()
-" Starpage
-Plug 'mhinz/vim-startify'
 
-" Async runner
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+" \"Gitlens\"
+Plug 'iamcco/sran.nvim', { 'do': { -> sran#util#install() } }
+Plug 'iamcco/git-p.nvim'
 
-" Syntax checker/autocomplete
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
-Plug 'dense-analysis/ale'
+" Coc
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" Rooter
-Plug 'airblade/vim-rooter'
+" Nerdfont handlr
+" Plug 'ambdalisue/nerdfont.vim'
+Plug 'antoinemadec/FixCursorHold.nvim'
 
-" Text-allign
-Plug 'godlygeek/tabular'
-Plug 'lifepillar/vim-colortemplate'
+" CtrlP
+Plug 'kien/ctrlp.vim'
+
+" easymotion
+Plug 'easymotion/vim-easymotion'
+
+" .jsx
+Plug 'maxmellon/vim-jsx-pretty'
+
+" .kt
+Plug 'udalov/kotlin-vim'
 
 " Files
 Plug 'tpope/vim-eunuch'
 
 " Repeat
 Plug 'tpope/vim-repeat'
+
+" Vim-rooter
+Plug 'airblade/vim-rooter'
 
 " Auto-indent
 Plug 'tpope/vim-sleuth'
@@ -41,90 +48,87 @@ Plug 'alvan/vim-closetag'
 Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 
 " FZF
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-" Git
+" Git, mané
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/gv.vim'
-Plug 'mhinz/vim-signify'
 
 " Nerdtree
 Plug 'preservim/nerdtree'
 
-" Float term 
+" Terminal, seu lindo
 Plug 'voldikss/vim-floaterm'
 
-" Neomake
+" Brincadeira de criança
 Plug 'neomake/neomake'
 
-" Snippets
+" Snippets, no formato da garrafa
 Plug 'honza/vim-snippets'
 Plug 'mattn/emmet-vim'
-Plug 'tpope/vim-surround'
 
-" Interactive shell
+" Interactive code 4 dummies
 Plug 'metakirby5/codi.vim'
 
 " Numbers
 Plug 'myusuf3/numbers.vim'
 
-" Autopairs
-
-" Aesthetics
-Plug 'kizza/actionmenu.nvim'
-Plug 'flazz/vim-colorschemes'
+" Aesthetics - Main
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/limelight.vim'
 
 " Functionalities
-Plug 'editorconfig/editorconfig-vim' 
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-surround'
+Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-abolish'
 Plug 'Yggdroot/indentLine'
-Plug 'tpope/vim-unimpaired'
-Plug 'brooth/far.vim'
 
-Plug 'ryanoasis/vim-devicons'
-Plug 'jkramer/vim-checkbox'
+" Polyglots confs
+Plug 'sheerun/vim-polyglot'
+
+
+Plug 'chrisbra/Colorizer'
+Plug 'KabbAmine/vCoolor.vim'
+Plug 'vim-scripts/loremipsum'
+Plug 'metakirby5/codi.vim'
+Plug 'dkarter/bullets.vim'
+
+" FZF
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" Plug 'junegunn/fzf.vim'
+
+" Things
+Plug 'Chiel92/vim-autoformat'
+Plug 'tpope/vim-commentary'
+Plug 'rhysd/vim-grammarous'
+Plug 'lambdalisue/suda.vim'
+Plug '907th/vim-auto-save'
+Plug 'mhinz/vim-startify'
+
 call plug#end()
 
-"" Misc
+" Cursor uptime
+let g:cursorhold_updatetime = 100
 
-" A.L.E
-let g:ale_disable_lsp = 1
-
-" Ergonomy
-filetype plugin indent on
-syntax enable
-set backspace=eol,start,indent
-set whichwrap=<,>,h,l,[,]
-
-" OS misc
-set fileformats=unix,dos,mac
-set hidden
-
-" Visual
-set noexpandtab
 set tabstop=2
 set shiftwidth=2
 set encoding=UTF-8
 set guifont=Hack\ Nerd\ Font:h18
 set noshowmode
 set shortmess+=F
-set colorcolumn=80,125 " Github style
 set noshowcmd
 
-" Simple keybindings/configs
-" Mouse uptime
-let g:cursorhold_updatetime = 5
+" O restante peguei do https://github.com/ChristianChiarulli/ porque sou preguiçoso para essas porras
 
 " Nerdtree
 nnoremap <C-b> :NERDTreeToggle<CR>
@@ -138,6 +142,7 @@ source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/vim-commentary.vim
 source $HOME/.config/nvim/plug-config/rainbow.vim
 source $HOME/.config/nvim/plug-config/codi.vim
+source $HOME/.config/nvim/plug-config/quickscope.vim
 source $HOME/.config/nvim/plug-config/vim-wiki.vim
 source $HOME/.config/nvim/plug-config/sneak.vim
 source $HOME/.config/nvim/plug-config/vim-rooter.vim
