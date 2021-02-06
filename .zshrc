@@ -117,16 +117,6 @@ function wifi_connect ()
   nmcli d wifi connect $1 password $2
 }
 
-function f3_git_conf()
-{
-  git config user.name "Gabriel Porto"; git config user.email "gsantos@f3capital.com.br"
-}
-
-function work_git_conf ()
-{
-  git config user.name "Gabriel"; git config user.email "gabriel@dowhile.com.br"
-}
-
 function git_conf ()
 {
   git config user.name "Gabriel"; git config user.email "gpsnts@protonmail.com"
