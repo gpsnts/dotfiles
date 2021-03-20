@@ -8,7 +8,8 @@ fi
 
 
 ### Limpa a porra do .gnome
-m -rf .gnome 2> /dev/null
+rm -rf javasharedresources
+rm -rf .gnome 2> /dev/null
 
 #### Env variables
 DEFAULT_USER=`whoami`
@@ -19,7 +20,6 @@ PSQL_HOME="/home/usr/.asdf/installs/postgres"
 export PATH=${PATH}:$HOME/.yarn/bin:/usr/local/mysql/bin:$JAVA_HOME:$HOME/.local/bin/:/opt/eclipse:$COMPOSER_HOME:/usr/bin/cmake:/home/usr/Android/Sdk/platform-tools$PATH
 
 #### ASDF-VM
-. $HOME/.asdf/plugins/dotnet-core/set-dotnet-home.zsh
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/plugins/java/set-java-home.zsh
 
