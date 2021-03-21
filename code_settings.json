@@ -1,0 +1,32 @@
+{
+		"window.zoomLevel": 1.35,
+    "terminal.integrated.fontFamily": "CozetteVector",
+    "terminal.integrated.fontSize": 18,
+    "terminal.explorerKind": "external",
+    "editor.fontLigatures": true,
+		"editor.fontFamily": "CozetteVector",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.tabSize": 2,
+    "editor.insertSpaces": false,
+		"editor.detectIndentation": false,
+		"editor.suggestSelection": "first",
+		"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+		"workbench.colorTheme": "Gruvbox Dark Hard",
+		"workbench.startupEditor": "newUntitledFile",
+		"editor.inlineHints.fontFamily": "CozetteVector",
+		"files.exclude": {
+			"**/.classpath": true,
+			"**/.project": true,
+			"**/.settings": true,
+			"**/.factorypath": true
+		},
+		"java.imports.gradle.wrapper.checksums": [
+			{
+				"sha256": "e24551a3b3f98866d26439148c81613d7677ea28bb8e135d27a13dfcbe31f0b0",
+				"allowed": true
+			}
+		],
+		"java.project.importOnFirstTimeStartup": "automatic",
+		"editor.tokenColorCustomizations": null,
+		"java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/home/usr/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\""
+}
